@@ -1,0 +1,54 @@
+{
+  "name": "anser-ghazi-portfolio",
+  "private": true,
+  "description": "Anser Ghazi's online portfolio website.",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "deploy": "gatsby build && gh-pages -d public",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@fontsource/lato": "^4.5.9",
+    "@fontsource/material-icons": "^4.5.4",
+    "@fontsource/material-icons-outlined": "^4.5.4",
+    "@fontsource/material-icons-rounded": "^4.5.4",
+    "@fontsource/material-icons-sharp": "^4.5.4",
+    "@fontsource/material-icons-two-tone": "^4.5.4",
+    "@fontsource/montserrat": "^4.5.12",
+    "@fontsource/noto-sans": "^4.5.11",
+    "@fontsource/open-sans": "^4.5.11",
+    "@fontsource/roboto": "^4.5.8",
+    "@fontsource/yantramanav": "^4.5.9",
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^4.21.1",
+    "gatsby-plugin-google-gtag": "^4.22.0",
+    "gatsby-plugin-image": "^2.21.0",
+    "gatsby-plugin-layout": "^4.14.0",
+    "gatsby-plugin-sharp": "^4.21.0",
+    "gatsby-plugin-styled-components": "^5.21.0",
+    "gatsby-source-filesystem": "^4.21.1",
+    "gatsby-transformer-sharp": "^4.21.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
