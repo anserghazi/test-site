@@ -65,7 +65,11 @@ const Stars = () => {
     }
   }
 
-  
+  let currentWindow = null;
+
+  if (typeof window !== "undefined") {
+    currentWindow = window.location.pathname
+  }
 
 
   return (
@@ -75,12 +79,12 @@ const Stars = () => {
                     if (data.isClicked) {
                     niceToMeetYou("forward");
                     }
-                    if (window.location.pathname === "/") {
+                    if (currentWindow === "/") {
                       if ((!data.isClicked) && data.isToggled && (!data.isActivated)) {
                         niceToMeetYou("reverse");
                         }
                     } 
-                    else if (window.location.pathname !== "/") {
+                    else if (currentWindow !== "/") {
                       if ((!data.isClicked) && data.isToggled && ((!data.isActivated) || (!isActivated))) {
                         niceToMeetYou("reverse");
                       }

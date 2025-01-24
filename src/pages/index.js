@@ -13,7 +13,11 @@ import please from "../assets/audio/please.wav"
 import ContextConsumer from "../components/Context.js"
 import { Link } from "gatsby"
 
-window.addEventListener('resize', onResize);
+
+
+
+
+
 
 function onResize() {
   if (window.location.pathname !== "/") {
@@ -732,6 +736,15 @@ function niceToMeetYou(str) {
 }
 
 export default function Home({}) {
+  useEffect(() => {
+    
+    window.addEventListener('resize', onResize);
+    
+    return () => {
+      window.addEventListener('resize', onResize);
+    }
+  }, []);
+  
   return (
     <Wrapper id="wrapper">
         <Script src="https://kit.fontawesome.com/9c3f68b958.js"></Script>

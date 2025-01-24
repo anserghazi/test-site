@@ -314,6 +314,21 @@ width: 100vw;
     }
   }
 
+  @media only screen and (max-width: 1835px) {
+   .van_1 {
+      opacity: 1;
+      -webkit-mask-image: -webkit-gradient(linear, right top, left top, 
+      from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    }
+
+  .van_2 {
+      opacity: 1;
+      -webkit-mask-image: -webkit-gradient(linear, left top, right top, 
+      from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    }
+  
+  }
+
   @media only screen and (max-width: 1900px) {
     iframe {
       width: 1050px;
@@ -380,6 +395,14 @@ width: 100vw;
       background: 'black';
       z-index: 2;
       padding-bottom: 40px;
+    }
+
+    .van_1 {
+      opacity: 0;
+    }
+
+  .van_2 {
+      opacity: 0;
     }
   }
 

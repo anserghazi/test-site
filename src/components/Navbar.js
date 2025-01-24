@@ -47,7 +47,7 @@ function closeNav() {
 
 
 
-  if (path === "") {
+  if (path === "" && (typeof document !== "undefined")) {
     let aboutIcon = document.getElementById("about_icon")
     let aboutLink = document.getElementById("about_me_link")
     let projectsIcon = document.getElementById("projects_icon")

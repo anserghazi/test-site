@@ -241,12 +241,17 @@ const Layout = ({ children }) => {
     console.log(isClicked, curtain, itachi)
     lights();
   }, [isClicked, itachi])
-    
+  
+  let currentWindow = null;
 
+  if (typeof window !== "undefined") {
+    currentWindow = window.location.pathname
+  }
+  
   useEffect(() => {
     updateStarColor();
     updateWrapperHeight();
-  }, [window.location.pathname])
+  }, [currentWindow])
   
 
   return (
