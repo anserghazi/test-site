@@ -744,10 +744,13 @@ export default function Home({}) {
       window.addEventListener('resize', onResize);
     }
   }, []);
-  
+
   return (
     <Wrapper id="wrapper">
         <Script src="https://kit.fontawesome.com/9c3f68b958.js"></Script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"></link> 
         <div class="section">
           <div class="content">
             <div class="header">
@@ -915,14 +918,6 @@ export default function Home({}) {
           <div class="row">
             <div class="flex-container">
               <div class="article_card">
-                <Link to="/articles/identity-theft-is-not-a-joke" class="article_link">
-                  <h3>Identity theft is not a joke - How millions of ants suffer every year</h3>
-                  <div class="biology">Biology</div>
-                  <p>Oct 2022</p>
-                </Link>
-              </div>
-
-              <div class="article_card">
                 <Link to="/articles/eastern-honey-bees" class="article_link">
                   <h3>Eastern Honey Bees: Stool as a Tool to Defend the Hive</h3>
                   
@@ -935,6 +930,14 @@ export default function Home({}) {
                 <Link to="/articles/gildan-messy-leadership-change" class="article_link">
                   <h3>Gildan’s Messy Leadership Change Hints at a Looming Legal Battle </h3>
                   
+                  <div class="finance">Finance</div>
+                  <p>Feb 2024</p>
+                </Link>
+              </div>
+
+              <div class="article_card">
+                <Link to="the-fabric-of-gildan" class="article_link">
+                  <h3>The Fabric of Gildan Hangs on the Thread of a Proxy War Between Leading Minority Shareholders</h3>
                   <div class="finance">Finance</div>
                   <p>Feb 2024</p>
                 </Link>
@@ -974,6 +977,12 @@ export default function Home({}) {
 }
 
 const Wrapper = styled.div`
+
+.typing {
+  font-family: "DotGothic16", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 // #ar_ikea_photo {
 //   width: 100%;

@@ -16,7 +16,7 @@ const resume = () => {
           src="https://drive.google.com/file/d/1CpWLn5SGxUwa9xDt-bOeWTiBLEIXJjkW/preview"
           loading="eager"
         ></iframe>
-        <div class="van_1">
+        {/* <div class="van_1">
       <pre class="pree_van"><b><i>!</i>!;`'`<font color="#FFFFCC">.ndMMP"(4MMx </font>(```!'<font color="#FFFFCC"> x??n.</font>'``' ;!'<font color="#CCCCCC">.nmMMMbmn.</font>`&lt;!!!!''.&gt;'`;;!!';&lt;!!!!'' ,;-'''`,;!!!'  .-`,;';;!',;;&lt;&gt;';;!''(;;;&gt;'-&lt;;;!!;  ,,
 ;;`' <font color="#FFFFCC">,MMP</font><font color="#FFDC99">;nn4M&gt;</font><font color="#FFFFCC">4MM </font>!!;-- <font color="#FFFFCC">=M;</font><font color="#FFDC66">%</font><font color="#FFFFCC">;Mb</font> --(('<font color="#CCCCCC"> MMM'</font><font color="#EBDCAA">nx</font><font color="#CCCCCC">)MMP </font><font color="#FFFFCC">.,nn. </font>`!;!''`,;!''`.,;&gt;'<font color="#FFFFCC"> .-==nn. </font>`!!';;!&gt; .! ;!&gt; ;!!'`;!!(  ``<font color="#CCCCCC">,.xnmnnx..</font>`    `  
 !!!!;<font color="#FFFFCC"> ,M&gt;</font><font color="#FFDC99">4MMnM"</font><font color="#FFFFCC">dML.</font>''`!;-.<font color="#FFFFCC"> "??""</font>.!;;!<font color="#CCCCCC"> ,MMM?</font><font color="#EBDCAA">4P</font><font color="#CCCCCC">dMM </font><font color="#FFFFCC">MP</font><font color="#FFDC66">)nx</font><font color="#FFFFCC">(Mx </font>!!!!''`,;;!!!'<font color="#FFFFCC"> -.ndMmn."Mx</font>`!&lt;!!! ;!`;!'.!!!';!!''<font color="#CCCCCC"> .nMPPP?</font><font color="#EBDCAA">;nnd;</font><font color="#CCCCCC">?4Mnx `;</font>!''`;.<font color="#FFFFCC">  4ndii=="M" </font>.!!'  `(.,.`--; --;<font color="#CCCCCC"> 44MMMMMMP </font><font color="#FFFFCC">"h</font><font color="#FFDC66">/C)</font><font color="#FFFFCC">uMP </font>!!!!;&lt;!!!!!!!<font color="#FFFFCC">,dnMM</font><font color="#FFFF99">MML`M</font><font color="#FFFFCC">nd4n </font>!!!' ;`;!';!!!';!! <font color="#CCCCCC">,dMP?</font><font color="#EBDCAA">inMMMMMMMMMnn,</font><font color="#CCCCCC">"Tx'
@@ -121,7 +121,7 @@ const resume = () => {
 <font color="#9999FF">;,;!!!;,. &lt;!;;!! </font><font color="#AA7841">!.`!!;,! '   '   .&lt;!!' !!! ;!!&gt; !&gt;.`&lt;!!!!!</font> $$$$CCLcccr?% $$$$$F<font color="#9999FF"> z"?"z$$",$$P&lt;$$$$". </font>,c$$P) !!!!!!!! "<font color="#9999FF">.&lt;'`,';! '</font></b>
 </pre>
 
-      </div>
+      </div> */}
       </div>
     </Wrapper>
   )

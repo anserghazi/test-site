@@ -1699,10 +1699,11 @@ padding-bottom: 60px;
   }
 
 
-  
-  
+    // background: linear-gradient(to bottom,rgb(12, 12, 33) 0%, rgb(9, 8, 22) 3%, rgb(9, 8, 22) 10%, rgb(17, 20, 21) 12%, rgb(28, 29, 31) 65%, rgb(28, 29, 31) 70%, rgb(28, 29, 31)  75%, rgb(28, 29, 31) 100%);
+  // background: linear-gradient(to bottom,rgb(12, 33, 15) 0%, rgb(9, 8, 22) 3%, rgb(9, 8, 22) 10%, rgb(12, 12, 33) 12%, rgb(28, 29, 31) 65%, rgb(28, 29, 31) 70%, rgb(28, 29, 31)  75%, rgb(28, 29, 31) 100%);
 
-  background: linear-gradient(to bottom,rgb(9, 8, 22) 0%, rgb(17, 20, 21) 12%, rgb(28, 29, 31) 22%, rgb(28, 29, 31) 60%, rgb(28, 29, 31)  75%, rgb(28, 29, 31) 100%);
+
+  background: linear-gradient(to bottom,rgb(2, 1, 14) 0%, rgb(9, 8, 22) 6%, rgb(9, 8, 22) 10%, rgb(12, 12, 18) 17%, rgb(28, 29, 31) 65%, rgb(28, 29, 31) 70%, rgb(28, 29, 31)  75%, rgb(28, 29, 31) 100%);
   background-position: 50% 100%;
   background-size: 400% 400%;
   display: flex;
