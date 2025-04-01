@@ -413,6 +413,544 @@ function closeNav() {
     }
   }, [])
 
+  function timeOut(str) {
+    if (window.location.pathname !== "/") {
+      return
+    }
+    let meetingButton = document.getElementById("meeting_button")
+    var audio_crow = document.getElementById("audio_crow");
+    
+    
+    audio_crow.volume = 0.1
+    
+    
+    meetingButton.style.backgroundColor = "transparent"
+    meetingButton.style.borderStyle = "none"
+    meetingButton.style.boxShadow = "none"
+    
+    setTimeout(niceToMeetYou(str), 80)
+    audio_crow.play();
+    
+    setTimeout(play(str), 950)
+    setTimeout(log, 4500)
+    setTimeout(pls, 8650)
+    
+  }
+
+  function pls() {
+    if (window.location.pathname !== "/") {
+      return
+    }
+    var audio_please = document.getElementById("audio_please");
+    audio_please.volume = 0.4
+    audio_please.play()
+  
+  }
+  
+  function log() {
+    if (window.location.pathname !== "/") {
+      return
+    }
+    console.log("Tsukuyomi!")
+    var audio_genjutsu = document.getElementById("audio_genjutsu");
+    audio_genjutsu.volume = 0.4
+    audio_genjutsu.play()
+  }
+  
+  function play(str) {
+    if (window.location.pathname !== "/") {
+      return
+    }
+    var audio_senya = document.getElementById("audio_senya");
+    var audio_tsukuyomi = document.getElementById("audio_tsukuyomi");
+    audio_tsukuyomi.volume = 0.30
+    audio_senya.volume = 0.35
+    audio_tsukuyomi.play()
+    setTimeout(stars(str), 350)
+    audio_senya.play();
+  
+    
+  }
+  
+  function niceToMeetYou(str) {
+    console.log(str)
+    console.log("nice to meet you")
+    let pageWrapper = document.getElementById("wrapper")
+    let meetingButton = document.getElementById("meeting_button")
+  
+    if (!pageWrapper || !meetingButton) {
+      return
+    }
+  
+    if (str === "reverse") {
+      pageWrapper.style.animation = "ReverseAnimation 5s ease"
+      pageWrapper.style.backgroundPosition = "50% 100%"
+      return
+    }
+    
+    if (str === "reverse_erase") {
+      pageWrapper.style.animation = "ReverseAnimation 5s ease"
+      pageWrapper.style.backgroundPosition = "50% 100%"
+      meetingButton.style.opacity = "0"
+      meetingButton.style.animation = "translate_2 3s ease-out"
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "3s"
+      profilePhoto.style.opacity = "1"
+      meetingButton.position = "none"
+      return
+    }
+    
+    if (str === "safe") {
+      pageWrapper.style.backgroundPosition = "50% 0%"
+      pageWrapper.style.animation = "Animation 7s ease"
+      return
+    }
+  
+    meetingButton.style.pointerEvents = "none"
+    let intro = document.getElementsByClassName("intro")
+    meetingButton.style.userSelect = "none"
+    meetingButton.tabIndex = "-1"
+    meetingButton.style.position = "absolute"
+    meetingButton.style.height = "300px"
+    meetingButton.style.width = "300px"
+    meetingButton.style.marginLeft = "12vw"
+    meetingButton.style.marginTop = "35vh"
+    meetingButton.style.fontSize = "6px"
+    meetingButton.style.color = "#bebebe"
+    meetingButton.style.transitionDuration = "3s"
+    meetingButton.style.transition = "all 2s ease-in"
+    meetingButton.style.animation = "translate 6s ease-in-out"
+    meetingButton.style.animationFillMode = "forwards"
+    if (window.innerWidth >= 3100 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "16.875vw"
+      meetingButton.style.marginTop = "27vh"
+      meetingButton.style.fontSize = "22px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+      
+    }
+    if (window.innerWidth >= 2400 && window.innerWidth < 3100 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "37.8vw"
+      meetingButton.style.marginTop = "9vh"
+      meetingButton.style.fontSize = "12px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 2200 && window.innerWidth < 2400 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "36.5vw"
+      meetingButton.style.marginTop = "9vh"
+      meetingButton.style.fontSize = "12px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 2100 && window.innerWidth < 2200 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "35.5vw"
+      meetingButton.style.marginTop = "9vh"
+      meetingButton.style.fontSize = "12px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1900 && window.innerWidth < 2100 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "35vw"
+      meetingButton.style.marginTop = "9vh"
+      meetingButton.style.fontSize = "12px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1800 && window.innerWidth < 1900 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "32vw"
+      meetingButton.style.marginTop = "4vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1700 && window.innerWidth < 1800 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "31vw"
+      meetingButton.style.marginTop = "4vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1600 && window.innerWidth < 1700 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "29vw"
+      meetingButton.style.marginTop = "4vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1450 && window.innerWidth < 1600 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "27.4vw"
+      meetingButton.style.marginTop = "4vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1300 && window.innerWidth < 1450 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "25vw"
+      meetingButton.style.marginTop = "4vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1200 && window.innerWidth < 1300 ) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "23vw"
+      meetingButton.style.marginTop = "3.5vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 1100 && window.innerWidth < 1200) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "20vw"
+      meetingButton.style.marginTop = "3vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 900 && window.innerWidth < 1100) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "17vw"
+      meetingButton.style.marginTop = "3vh"
+      meetingButton.style.fontSize = "10px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 794 && window.innerWidth < 900) {
+      let profilePhoto = document.getElementsByClassName("photo")[0]
+      profilePhoto.style.transitionDuration = "0.5s"
+      profilePhoto.style.opacity = "0"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginRight = "17vw"
+      meetingButton.style.marginTop = "2vh"
+      meetingButton.style.fontSize = "9px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+    }
+    if (window.innerWidth >= 450 && window.innerWidth < 794) {
+      meetingButton.style.marginRight = "150px"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginTop = "0vh"
+      meetingButton.style.fontSize = "8px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+      document.getElementsByClassName("section")[0].style.marginBottom = "50px"
+    }
+    if (window.innerWidth < 450) {
+      meetingButton.style.marginRight = "120px"
+      meetingButton.style.right = "0"
+      meetingButton.style.marginTop = "0vh"
+      meetingButton.style.fontSize = "8px"
+      meetingButton.style.color = "red"
+      meetingButton.style.zIndex = "1"
+      meetingButton.style.fontWeight = "1000"
+      document.getElementsByClassName("section")[0].style.marginBottom = "50px"
+    }
+  
+    meetingButton.textContent = 
+     `
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠠⠀⣐⣨⣭⣶⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡀⢻
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠤⠄⢐⣢⣤⣭⣶⣶⣾⣿⣿⠟⢹⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣟⣿⣸
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⢰⣶⣿⣿⣿⣿⣿⣿⠿⠛⠋⠉⠙⠃⢀⣾⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣾⣿⣇
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⡿⠁⣠⣶⠿⠿⠿⢶⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⡿⠁⣴⡿⠉⢀⣬⣥⡀⠙⣛⠋⠉⠉⣁⠀⢰⡀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣘⢿⣿⣿
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡄⠀⢸⣿⣿⣿⠿⠇⠀⠛⠁⢁⠉⠁⠀⢈⠀⢠⣶⣿⣿⣿⠀⢸⣧⠀⠀⠀⠀⠀⣸⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⢻⣿
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠇⠀⢘⣉⣀⣀⣂⠀⢀⠀⠺⣦⣄⣂⣴⠟⠀⣼⣿⣿⣿⣿⠀⢸⣿⡀⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⢇⣿⡿
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣆⠀⢸⣿⣿⣿⡏⠀⠛⠓⣐⠈⠍⠉⢁⣤⣾⣿⣿⣿⣿⣿⠀⢸⣿⡇⠀⠀⠀⠀⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⣾⣿⠇
+       ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⢸⣿⣿⣿⣿⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠛⠋⠁⠀⠀⠀⠀⢐⣂⣴⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⡿⠀
+       ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡆⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠉⠁⠀⠀⠀⣀⣤⣤⠄⠀⠀⠀⢛⡩⠔⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠃⠀
+       ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣾⣷⠀⠿⠿⠿⠿⠛⠛⠛⠉⠁⠀⠀⠀⣀⣀⣤⣤⣴⣶⣿⣶⣿⠟⣡⡄⠀⠀⠀⠁⡔⡉⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡟⠀⠀
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⣀⣀⣤⣤⣤⣴⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⠋⢵⣿⡿⢃⠀⠀⢀⠸⡇⠀⢉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⢿⠇⠀⠀
+      ⡿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣤⣤⣄⢰⣶⣤⣤⣬⣉⣉⣉⣛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⠁⣾⠿⣵⡟⠀⠀⢸⠧⠀⠒⣂⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⣻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠿⢋⣥⠤⠒⠛⠛⠓⠲⠤⢬⣙⣛⣿⣦⡙⢿⣿⣿⣿⣿⣿⠸⣿⠀⣿⣿⡄⠀⢠⣴⣾⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀
+      ⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠞⠋⣡⣴⢂⡟⡀⢠⡐⠦⡄⠨⣙⢿⣌⠻⣶⣿⣿⣿⣿⣿⠀⣿⣦⠹⣿⣧⠀⢸⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⠀⠀⡠⠈
+      ⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⣄⠈⢿⣿⡎⠧⠁⠠⠔⡠⠈⠈⢈⣡⣿⢁⣿⣿⣿⣿⣿⣿⡆⣿⣿⣷⣌⠻⠀⣾⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡶⠊⠀⠀
+      ⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣷⣤⠙⠿⠦⢈⠋⢅⣠⣤⣾⣿⣿⠇⣼⣿⣿⣿⣿⣿⣿⡇⢹⣿⣿⣿⣷⠀⠿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠊⠀⠀⠀⠀
+      ⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣯⣴⣾⣯⣥⣶⣿⣿⣿⣿⣿⡟⣸⣿⣿⣿⣿⣿⣿⣿⣧⣼⣿⣿⣿⣿⢰⣦⡙⢿⣿⣿⡇   you've been placed  .   .   .   .   . 
+      ⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢡⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡙⣿⡇ .  .  .  .  . under  my  genjutsu                    
+      ⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ 
+      ⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀. . . . . . please hire me
+      ⣿⣿⣿⣿⠀⠀⡆⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⠃⣿⣿⣿⣿⣿⣿⣿⡟⢻⣿⣿⣿⡿⢋⣭⣿⣿⣿⣿⣿⣿⣿⡇⠀⡄⢠⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⣿⣿⣿⣿⡇⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⡿⢰⣿⣿⣿⣿⣿⣿⣿⣿⣦⣍⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡗⢠⡇⠌⢿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⣿⣿⣿⣿⣧⠀⣿⠀⠀⠀⠀⠀⠀⢀⠀⠀⡾⣈⢻⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣼⡇⠀⠈⢻⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⣿⣿⣿⣿⣿⡄⡟⠀⠀⠀⠀⠀⠀⠸⡀⠀⢰⢩⢂⠻⣿⣿⣯⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠛⢻⣿⠁⣿⡇⠀⠀⠈⢿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⣿⣿⣿⣿⣿⡇⠁⠀⠀⠀⠀⠀⠀⠐⠇⠀⠀⢃⡞⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⣋⣩⣭⣶⣶⣿⣿⡿⣿⣿⡿⢰⣿⡇⠀⠀⠀⠈⣿⣆⠀⠀⠀⠀⠀⠀⠀⡀⠀
+      ⣿⣿⣿⣿⣿⣷⠀⠀⡄⠀⠀⠀⠀⠀⡰⡀⠈⡜⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣤⣾⣿⡿⠿⠿⢛⣛⣩⣥⣼⣿⣿⣷⣾⣿⡇⠄⠀⠄⠀⠼⣿⡄⠐⠐⠐⠒⢐⡲⠁⠀
+      ⣿⣿⣿⣿⣿⣿⣴⠀⣷⠀⠀⢰⠀⠀⠃⠁⢸⠁⠀⠀⠀⠀⠀⠀⠈⡻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡗⠀⠂⠀⠁⣌⢹⣧⠈⠈⠁⠀⠀⠁⠀⠀
+      ⣿⣿⣿⣿⣿⣿⣿⠀⢸⠀⠀⠈⡆⠀⠌⢄⡟⡀⠀⠀⠀⠀⠀⠀⠀⣿⣶⡍⡛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⢊⠀⢿⣇⠀⠀⠀⠀⢐⠀⠀
+      ⣿⣿⣿⣿⣿⣿⣿⠀⢸⠀⠀⠀⣇⡀⢠⢸⢃⠃⠀⠀⠀⠀⠀⠀⠀⢸⣿⣷⢸⣄⢈⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠩⣒⠁⠀⠀⠀⣴⠁⣨⠘⣿⡀⠀⠀⠀⠨⠀⠀
+      ⣿⣿⣿⣿⣿⣿⣿⢸⢸⡄⡆⠀⣿⡇⠀⣿⣸⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣇⠹⢀⠥⢖⠦⣉⠛⠻⢿⣿⣿⣿⣿⡿⠟⢛⡡⠔⠊⠔⣂⠀⠀⢀⡥⢚⠅⣣⢹⣷⡀⠀⠀⠰`
+      
+    
+    meetingButton.style.alignSelf = "flex-start"
+    meetingButton.style.fontWeight = "400"
+    meetingButton.style.boxShadow = "none"
+    meetingButton.style.backgroundColor = "transparent"
+    meetingButton.style.borderStyle = "none"
+    intro[0].style.marginBottom = "15px"
+  }
+
+  function stars(str) {
+    if (window.location.pathname !== "/") {
+      return
+    }
+    if (str === "lights_off") {
+      console.log('oi')
+      return
+    }
+    let stars_1 = document.getElementsByClassName("art_1")[0]
+    let stars_2 = document.getElementsByClassName("art_2")[0]
+    
+    stars_1.style.transform = "translateY(180%)"
+    stars_2.style.transform = "translateY(180%)"
+    if (window.innerWidth >= 3400 && window.innerWidth < 3900) {
+      stars_1.style.transform = "translateY(80%)"
+      stars_1.style.transitionDuration = "11s"
+      stars_2.style.transform = "translateY(75%)"
+      stars_2.style.transitionDuration = "11s"
+    } 
+    if (window.innerWidth >= 3200 && window.innerWidth < 3400) {
+      stars_1.style.transform = "translateY(90%)"
+      stars_1.style.transitionDuration = "11s"
+      stars_2.style.transform = "translateY(80%)"
+      stars_2.style.transitionDuration = "11s"
+    } 
+    if (window.innerWidth >= 3100 && window.innerWidth < 3200) {
+      stars_1.style.transform = "translateY(95%)"
+      stars_1.style.transitionDuration = "10s"
+      stars_2.style.transform = "translateY(85%)"
+      stars_2.style.transitionDuration = "10s"
+    } 
+    if (window.innerWidth >= 2800 && window.innerWidth < 3100) {
+      stars_1.style.transform = "translateY(100%)"
+      stars_1.style.transitionDuration = "13s"
+      stars_2.style.transform = "translateY(95%)"
+      stars_2.style.transitionDuration = "13s"
+    } 
+    if (window.innerWidth >= 2700 && window.innerWidth < 2800) {
+      stars_1.style.transform = "translateY(105%)"
+      stars_1.style.transitionDuration = "13s"
+      stars_2.style.transform = "translateY(100%)"
+      stars_2.style.transitionDuration = "13s"
+    } 
+    if (window.innerWidth >= 2500 && window.innerWidth < 2700) {
+      stars_1.style.transform = "translateY(120%)"
+      stars_1.style.transitionDuration = "9s"
+      stars_2.style.transform = "translateY(120%)"
+      stars_2.style.transitionDuration = "9s"
+    } 
+    if (window.innerWidth >= 2200 && window.innerWidth < 2500) {
+      stars_1.style.transform = "translateY(115%)"
+      stars_1.style.transitionDuration = "10s"
+      stars_2.style.transform = "translateY(105%)"
+      stars_2.style.transitionDuration = "10s"
+    } 
+    if (window.innerWidth >= 1900 && window.innerWidth < 2200) {
+      stars_1.style.transform = "translateY(120%)"
+      stars_1.style.transitionDuration = "10s"
+      stars_2.style.transform = "translateY(110%)"
+      stars_2.style.transitionDuration = "10s"
+    } 
+    if (window.innerWidth >= 1750 && window.innerWidth < 1900) {
+      stars_1.style.transform = "translateY(100%)"
+      stars_1.style.transitionDuration = "9s"
+      stars_2.style.transform = "translateY(100%)"
+      stars_2.style.transitionDuration = "9s"
+    } 
+    if (window.innerWidth >= 1600 && window.innerWidth < 1750) {
+      stars_1.style.transform = "translateY(100%)"
+      stars_1.style.transitionDuration = "14s"
+      stars_2.style.transform = "translateY(100%)"
+      stars_2.style.transitionDuration = "14s"
+    } 
+    if (window.innerWidth >= 1500 && window.innerWidth < 1600) {
+      stars_1.style.transform = "translateY(90%)"
+      stars_1.style.transitionDuration = "9s"
+      stars_2.style.transform = "translateY(90%)"
+      stars_2.style.transitionDuration = "9s"
+    } 
+    if (window.innerWidth >= 1400 && window.innerWidth < 1500) {
+      stars_1.style.transform = "translateY(90%)"
+      stars_1.style.transitionDuration = "14s"
+      stars_2.style.transform = "translateY(90%)"
+      stars_2.style.transitionDuration = "14s"
+    } 
+    if (window.innerWidth >= 1280 && window.innerWidth < 1400) {
+      stars_1.style.transform = "translateY(70%)"
+      stars_1.style.transitionDuration = "14s"
+      stars_2.style.transform = "translateY(70%)"
+      stars_2.style.transitionDuration = "14s"
+    } 
+    if (window.innerWidth >= 800 && window.innerWidth < 1280) {
+      stars_1.style.transform = "translateY(100%)"
+      stars_1.style.transitionDuration = "14s"
+      stars_2.style.transform = "translateY(110%)"
+      stars_2.style.transitionDuration = "14s"
+    } 
+    if (window.innerWidth >= 700 && window.innerWidth < 800) {
+      stars_1.style.transform = "translateY(70%)"
+      stars_1.style.transitionDuration = "10s"
+      stars_2.style.transform = "translateY(70%)"
+      stars_2.style.transitionDuration = "10s"
+    } 
+    if (window.innerWidth >= 600 && window.innerWidth < 700) {
+      stars_1.style.transform = "translateY(75%)"
+      stars_1.style.transitionDuration = "9s"
+      stars_2.style.transform = "translateY(80%)"
+      stars_2.style.transitionDuration = "9s"
+    } 
+    if (window.innerWidth >= 500 && window.innerWidth < 600) {
+      stars_1.style.transform = "translateY(125%)"
+      stars_1.style.transitionDuration = "11s"
+      stars_2.style.transform = "translateY(105%)"
+      stars_2.style.transitionDuration = "11s"
+    } 
+    if (window.innerWidth >= 400 && window.innerWidth < 500) {
+      stars_1.style.transform = "translateY(120%)"
+      stars_1.style.transitionDuration = "11s"
+      stars_2.style.transform = "translateY(105%)"
+      stars_2.style.transitionDuration = "11s"
+    } 
+    if (window.innerWidth >= 350 && window.innerWidth < 400) {
+      stars_1.style.transform = "translateY(100%)"
+      stars_1.style.transitionDuration = "11s"
+      stars_2.style.transform = "translateY(95%)"
+      stars_2.style.transitionDuration = "11s"
+    } 
+    if (window.innerWidth >= 300 && window.innerWidth < 350) {
+      stars_1.style.transform = "translateY(100%)"
+      stars_1.style.transitionDuration = "11s"
+      stars_2.style.transform = "translateY(95%)"
+      stars_2.style.transitionDuration = "11s"
+    } 
+    if (window.innerWidth < 300) {
+      stars_1.style.transform = "translateY(130%)"
+      stars_1.style.transitionDuration = "11s"
+      stars_2.style.transform = "translateY(105%)"
+      stars_2.style.transitionDuration = "11s"
+    } 
+    
+  }
+
+  function typeText(str) {
+    // array with texts to type in typewriter
+    var dataText = [ "Nice to meet you!"];
+    if (str === "tsukuyomi") {
+      var dataText = [ "Tsukuyomi!", "You've been placed under my genjutsu...", "Please hire me 🙏"];
+  
+    }
+    // type one text in the typwriter
+    // keeps calling itself until the text is finished
+    function typeWriter(text, i, fnCallback) {
+      // chekc if text isn't finished yet
+      if ((i < (text.length)) && (document.getElementById("typewriter_2") && (document.getElementById("handshake_icon")))) {
+        // add next character to h1
+       document.getElementById("typewriter_2").innerHTML = text.substring(0, i+1) +'<span id="typing_span aria-hidden="true"></span>';
+       document.getElementById("typewriter_2").style.display = "flex"
+       document.getElementById("typewriter_2").style.zIndex = "5"
+       document.getElementById("typewriter_2").style.opacity = "1"
+       document.getElementById("handshake_icon").style.opacity = "0"
+       document.getElementById("handshake_icon").style.position = "absolute"
+       document.getElementById("meeting_button").style.pointerEvents = "none"
+       document.getElementById("meeting_button").style.backgroundColor = "transparent"
+       document.getElementById("meeting_button").style.boxShadow = "none"
+       document.getElementById("meeting_button").style.borderColor = "transparent"
+  
+        // wait for a while and call this function again for next character
+        setTimeout(function() {
+          typeWriter(text, i + 1, fnCallback)
+        }, 100);
+      }
+      // text finished, call callback if there is a callback function
+      else if (typeof fnCallback == 'function') {
+        // call callback after timeout
+        setTimeout(fnCallback, 700);
+      }
+    }
+    // start a typewriter animation for a text in the dataText array
+     function StartTextAnimation(i) {
+       if (typeof dataText[i] == 'undefined'){
+          setTimeout(function() {
+            StartTextAnimation(0);
+          }, 20000);
+       }
+       // check if dataText[i] exists
+      if (dataText[i]) {
+        // text exists! start typewriter animation
+       typeWriter(dataText[i], 0, function(){
+         // after callback (and whole text has been animated), start next text
+         StartTextAnimation(i + 1);
+       });
+      }
+    }
+    // start the text animation
+    StartTextAnimation(0);
+  };
+
   return (
     <Wrapper>
       <section className="navigation">
@@ -428,12 +966,27 @@ function closeNav() {
                   <div class="lightswitch" id="lightswitch" onClick={() => {
                     set({ isClicked: !data.isClicked }) 
                     set({ isToggled: true })
+
+                    if (!data.isClicked) {
+                      set({ isClicked: !data.isClicked })
+                      set({ curtain: "up" })
+                    } 
                     
                     if (data.isClicked) {
                       set({ curtain: "down" })
                     } else {
                       set({ curtain: "up" })
                     }
+
+                    if (data.itachi !== "revealed") {
+                      set({ isToggled: true })
+                      set({ itachi: "revealed" })
+                      timeOut();
+                      typeText("tsukuyomi")
+                    }
+                   
+
+                    
                     }}><p id="star" class="star">✦</p></div>
                 );
               }}

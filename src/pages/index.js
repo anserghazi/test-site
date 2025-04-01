@@ -14,7 +14,58 @@ import ContextConsumer from "../components/Context.js"
 import { Link } from "gatsby"
 
 
+function typeText(str) {
+  // array with texts to type in typewriter
+  var dataText = [ "Nice to meet you!"];
+  // if (str === "tsukuyomi") {
+  //   var dataText = [ "Tsukuyomi!", "You've been placed under my genjutsu...", "Please hire me 🙏"];
 
+  // }
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if ((i < (text.length)) && (document.getElementById("typewriter_1"))) {
+      // add next character to h1
+     document.getElementById("typewriter_1").innerHTML = text.substring(0, i+1) +'<span id="typing_span aria-hidden="true"></span>';
+     document.getElementById("typewriter_1").style.display = "flex"
+     document.getElementById("handshake_icon").style.opacity = "0"
+     document.getElementById("handshake_icon").style.position = "absolute"
+     document.getElementById("meeting_button").style.pointerEvents = "none"
+     document.getElementById("meeting_button").style.backgroundColor = "transparent"
+     document.getElementById("meeting_button").style.boxShadow = "none"
+     document.getElementById("meeting_button").style.borderColor = "transparent"
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 20000);
+     }
+     // check if dataText[i] exists
+    if (dataText[i]) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+};
 
 
 
@@ -750,16 +801,15 @@ export default function Home({}) {
         <Script src="https://kit.fontawesome.com/9c3f68b958.js"></Script>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
-        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"></link> 
+        <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet"></link> 
         <div class="section">
           <div class="content">
             <div class="header">
               <h1>Hey, I'm Anser</h1>
               <p class="intro">
-                I'm a software developer in Toronto with experience in
-                full-stack development. I like spicy food, high fantasy, and
-                running outdoors.
+              I'm a software developer based in Toronto with experience full-stack development. Outside of coding, you'll find me exploring high fantasy worlds, experimenting with spicy recipes, or going for a run.
               </p>
+              <h1 id="typewriter_2">Nice to meet you!</h1>
               <ContextConsumer>
                 {({ data, set }) => {
           
@@ -783,17 +833,13 @@ export default function Home({}) {
                   return (
                     // this is for the welcome button
                     <button id="meeting_button" onClick={() => {
-                      if (!data.isClicked) {
-                        set({ isClicked: !data.isClicked })
-                        set({ curtain: "up" })
-                      } 
-                      
-                      set({ isToggled: true })
-                      set({ itachi: "revealed" })
-                      timeOut();
+                      typeText();
                       
                       }}>
-                      <i class="fa-solid fa-handshake-simple"></i>
+                      <i id="handshake_icon" class="fa-solid fa-handshake-simple"></i>
+                        <div class="typewriter">
+                          <h1 id="typewriter_1">Nice to meet you!</h1>
+                        </div>
                     </button>
                     
                   
@@ -978,10 +1024,56 @@ export default function Home({}) {
 
 const Wrapper = styled.div`
 
+#typewriter_1 {
+  font-size: 65px;
+  color: white;
+  display: none;
+  font-family: "Handjet", serif;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+}
+
+#typewriter_2 {
+  font-size: 65px;
+  color: white;
+  font-family: "Handjet", serif;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  display: none;
+}
+
+#typing_span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+  animation-delay: 1s;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  height: 100%;
+}
+
+.typewriter h1 {
+  margin-top: -20px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .05em solid orange; /* The typwriter cursor */
+  animation: 
+    blink-caret 0.85s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 .typing {
-  font-family: "DotGothic16", serif;
-  font-weight: 400;
-  font-style: normal;
+  
 }
 
 // #ar_ikea_photo {
