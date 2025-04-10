@@ -17,8 +17,6 @@ import { Link } from "gatsby"
 function typeText(str) {
   // array with texts to type in typewriter
   var dataText = [ "Nice to meet you!"];
-  // if (str === "tsukuyomi") {
-  //   var dataText = [ "Tsukuyomi!", "You've been placed under my genjutsu...", "Please hire me 🙏"];
 
   // }
   // type one text in the typwriter

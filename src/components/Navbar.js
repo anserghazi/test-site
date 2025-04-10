@@ -982,7 +982,7 @@ function closeNav() {
                       set({ isToggled: true })
                       set({ itachi: "revealed" })
                       timeOut();
-                      typeText("tsukuyomi")
+                      // typeText("tsukuyomi")
                     }
                    
 
